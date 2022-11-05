@@ -2,7 +2,7 @@ import React from "react";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { Ionicons } from "@expo/vector-icons";
 import { colors } from "../constants/themes/colors";
-import ListNavigator from "./ListNavigator";
+import ExploreNavigator from "./ExploreNavigator";
 import SearchNavigator from "./SearchNavigator";
 import UserNavigator from "./UserNavigator";
 
@@ -10,7 +10,7 @@ const TabsNavigator = () =>{
     const BottomTab = createBottomTabNavigator();
     return(
         <BottomTab.Navigator
-            initialRouteName="ListTab"
+            initialRouteName="ExploreTab"
             screenOptions={{
                 headerShown: false,
                 tabBarLabelStyle: {
@@ -20,13 +20,13 @@ const TabsNavigator = () =>{
             }}
         >
             <BottomTab.Screen
-                name="ListTab"
-                component={ListNavigator}
+                name="ExploreTab"
+                component={ExploreNavigator}
                 options={{
-                    title: 'Lista',
+                    title: 'Explorar',
                     tabBarIcon: ({ focused }) => (
                         <Ionicons 
-                            name={focused ? 'list' : "list-outline"}
+                            name={focused ? 'home' : "home-outline"}
                             size={22}
                             color={colors.primary}
                         />

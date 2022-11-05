@@ -1,12 +1,28 @@
 import React from "react";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import { Text } from "react-native";
+import Search from "../../screens/Search";
 
 const Stack = createNativeStackNavigator();
 
 const SearchNavigator = () => {
     return(
-        <Text>Search Navigator</Text>
+        <Stack.Navigator 
+        initialRouteName="Search"
+        screenOptions={{
+            headerTitleStyle: {
+                fontFamily: 'Montserrat-Bold',
+            },
+        }}
+    >
+      <Stack.Screen 
+            name="Search"
+            component={Search} 
+            options={{
+                title: 'Buscar quintas',
+            }}
+        />
+
+    </Stack.Navigator>
     )
 }
 

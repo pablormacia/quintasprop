@@ -1,13 +1,29 @@
 import React from "react";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import { Text } from "react-native";
+import User from "../../screens/User";
 
 const Stack = createNativeStackNavigator();
 
-const UserNavigator = () => {
+const SearchNavigator = () => {
     return(
-        <Text>User Navigator</Text>
+        <Stack.Navigator 
+        initialRouteName="User"
+        screenOptions={{
+            headerTitleStyle: {
+                fontFamily: 'Montserrat-Bold',
+            },
+        }}
+    >
+      <Stack.Screen 
+            name="User"
+            component={User} 
+            options={{
+                title: 'Perfil de usuario',
+            }}
+        />
+
+    </Stack.Navigator>
     )
 }
 
-export default UserNavigator
+export default SearchNavigator
