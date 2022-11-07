@@ -10,13 +10,14 @@ const Explore = ({navigation}) => {
         <ImageBackground source={image} resizeMode="cover" style={styles.image}>
         <Button
             title="Listado de quintas"
-            color="#841584"
+            color="#26A96C"
              onPress={() =>
                 navigation.navigate('ExploreList', { name: 'ExploreList' })
             }
         />
         <Button
             title="Mapa de quintas"
+            color="#32936F"
              onPress={() =>
                 navigation.navigate('ExploreMap', { name: 'ExploreMap' })
             }

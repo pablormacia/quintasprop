@@ -1,7 +1,9 @@
 import React from "react";
 import { ActivityIndicator } from "react-native";
 import { useFonts } from "expo-font";
-import InitialNavigator from "./src/navigation/AppNavigator";
+import AppNavigator from "./src/navigation/AppNavigator";
+import store from "./src/store";
+import { Provider } from "react-redux";
 
 export default function App() {
 
@@ -15,6 +17,8 @@ export default function App() {
     return <ActivityIndicator />;
   }
   return (
-    <InitialNavigator />
+    <Provider store={store}>
+      <AppNavigator />
+    </Provider>
   );
 }
