@@ -1,12 +1,15 @@
 import  React from 'react' ;
-import { View, Text, TouchableOpacity } from 'react-native' ;
+import { View, Text, TouchableOpacity,Button } from 'react-native' ;
 
-const HouseItem = ({house}) => {
+const HouseItem = ({house, onSelected}) => {
     return(
         <View>
             <TouchableOpacity>
                 <View>
-                    <Text>{house.name}</Text>
+                    <Button
+                        title={house.name}
+                        onPress={() => onSelected(house)}
+                    />
                 </View>
             </TouchableOpacity>
         </View>
