@@ -7,7 +7,7 @@
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
     "splash": {
-      "image": "./assets/splash.jpg",
+      "image": "./assets/splash.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
@@ -19,6 +19,20 @@
     ],
     "ios": {
       "supportsTablet": true
-    }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "b6c9bd52-2ae1-4fa9-9547-946da50d6b01"
+      }
+    },
+    "android": {
+      "package": "com.pablormacia.quintasprop"
+    },
+    "build": {
+      "preview": {
+        "android": {
+          "buildType": "apk"}
+          }
+        }
   }
 }
