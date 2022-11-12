@@ -1,8 +1,10 @@
 import  React from 'react' ;
-import {StyleSheet, View, Text, Image, Dimensions } from 'react-native' ;
+import {StyleSheet, View, Text, Button, Image, Dimensions, TouchableOpacity } from 'react-native' ;
+import { Colors } from 'react-native/Libraries/NewAppScreen';
 
-const HouseItem = ({house}) => {
+const HouseListItem = ({house, onSelected}) => {
     return(
+        <TouchableOpacity onPress={() => onSelected(house)}>
         <View style={styles.container}>
                 <View style={styles.imgContainer}>
                     <Image style={styles.image} source={{uri: house.img}} />
@@ -15,18 +17,20 @@ const HouseItem = ({house}) => {
                  
                 </View>
         </View>
+        </TouchableOpacity>
     )
 }
 
 const styles = StyleSheet.create({
     container: {
         flex:1,
+        flexDirection: "row",
         justifyContent: "flex-start",
         alignItems: "flex-start",
         paddingVertical:5,
     },
     imgContainer: {
-        width:'100%',
+        width:Dimensions.get('window').width*0.5,
         height: 200,
         borderRadius: '50%',
         justifyContent: "center",
@@ -47,4 +51,4 @@ const styles = StyleSheet.create({
 
 })
 
-export default HouseItem;
+export default HouseListItem;

@@ -1,11 +1,15 @@
-import React from "react";
-import { useSelector } from "react-redux";
-import { Text } from "react-native";
+import React, {useEffect} from "react";
+import { useSelector,useDispatch } from "react-redux";
 import MapItem from "../components/MapItem";
+import { getHouses } from "../store/actions/houses.action";
+
 
 const ExploreMap = ()=>{
-    const location = {lat:'-34.56691050891969', lng:'-58.34229502458255'}
+    const dispatch = useDispatch();
     const listHouses = useSelector((state)=>state.houses.listHouses)
+    useEffect(()=>{
+        dispatch(getHouses());
+    }, []);
     return(
         <MapItem houses={listHouses} />
     )

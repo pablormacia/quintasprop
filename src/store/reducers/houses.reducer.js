@@ -1,14 +1,21 @@
 import { quintasData } from "../../data/mock";
-import { SELECT_HOUSE } from "../actions/houses.action";
+import { SELECT_HOUSE } from "../actions/house.action";
+import { GET_HOUSES }  from "../actions/houses.action";
+
 
 const initialState = {
-    listHouses: quintasData,
+    listHouses: [],
     filteredHouses: [],
     selectedHouse: null
 }
 
 const housesReducer = (state = initialState, action) => {
     switch(action.type){
+        case GET_HOUSES:
+            return {
+                ...state,
+                listHouses: action.payload
+            }
         case SELECT_HOUSE:
             const indexHouse = state.listHouses.findIndex(
                 (house) => house.id === action.houseId
@@ -19,7 +26,9 @@ const housesReducer = (state = initialState, action) => {
                 selectedHouse: state.listHouses[indexHouse]
             } 
         default:
-            return state
+            return {
+                state
+            }
     }
 }
 

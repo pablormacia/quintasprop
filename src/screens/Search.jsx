@@ -1,10 +1,13 @@
 import React from "react";
-import { Text } from "react-native";
+import { Text, View } from "react-native";
 
 
 const Search = () => {
     return(
-        <Text>Buscador de quintas</Text>
+        <View>
+            <Text>Buscador de quintas</Text>
+            <Text>Esta sección está en construcción</Text>
+        </View>
     )
 }
 

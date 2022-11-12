@@ -1,0 +1,1 @@
+export const URL_API = 'https://quintasprop-82e50-default-rtdb.firebaseio.com/';
