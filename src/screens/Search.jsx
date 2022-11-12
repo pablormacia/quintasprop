@@ -6,7 +6,7 @@ const Search = () => {
     return(
         <View>
             <Text>Buscador de quintas</Text>
-            <Text>Esta sección está en construcción</Text>
+            <Text>¡Proximamente!</Text>
         </View>
     )
 }

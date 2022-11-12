@@ -2,6 +2,7 @@ import  React, {useState} from 'react' ;
 import { View, Text, StyleSheet,Button, Image, Alert } from 'react-native' ;
 import * as ImagePicker from "expo-image-picker";
 import * as Permissions from "expo-permissions";
+import { colors } from '../constants/themes/colors';
 
 const ImageSelector = ({onImage}) => {
     const [pickedUri,setPickedUri] = useState();
@@ -34,13 +35,14 @@ const ImageSelector = ({onImage}) => {
         <View style={styles.container}>
                 <View style={styles.preview}>
                     {!pickedUri ? (
-                        <Image style={styles.image} source={{uri: 'https://mspgh.unimelb.edu.au/__data/assets/image/0011/3576098/Placeholder.jpg'}}/>
+                        <Image style={styles.image} source={{uri: 'https://www.softzone.es/app/uploads-softzone.es/2018/04/guest.png'}}/>
                     ) : (
                         <Image resizeMode={'cover'} style={styles.image} source={{uri: pickedUri}}  />
                     )}
                 </View>
                 <Button
                     title="Tomar foto"
+                    color={colors.primary}
                     onPress={handlerTakeImage}
                 />
         </View>

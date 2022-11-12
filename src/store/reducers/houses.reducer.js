@@ -1,4 +1,4 @@
-import { quintasData } from "../../data/mock";
+import { quintasData } from "../../data/mockUser";
 import { SELECT_HOUSE } from "../actions/house.action";
 import { GET_HOUSES }  from "../actions/houses.action";
 

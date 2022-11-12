@@ -1,6 +1,7 @@
 import React from "react";
 import { ImageBackground, StyleSheet, Button, TouchableOpacity, View } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
+import { colors } from "../constants/themes/colors";
 
 
 const image = { uri: "https://st2.depositphotos.com/4187197/9592/v/600/depositphotos_95921748-stock-illustration-organic-booklet-green-background-vertical.jpg" }
@@ -10,14 +11,14 @@ const Explore = ({navigation}) => {
         <ImageBackground source={image} resizeMode="cover" style={styles.image}>
         <Button
             title="Listado de quintas"
-            color="#26A96C"
+            color={colors.primary}
              onPress={() =>
                 navigation.navigate('ExploreList', { name: 'ExploreList' })
             }
         />
         <Button
             title="Mapa de quintas"
-            color="#32936F"
+            color={colors.secondary}
              onPress={() =>
                 navigation.navigate('ExploreMap', { name: 'ExploreMap' })
             }

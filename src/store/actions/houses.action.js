@@ -1,5 +1,5 @@
 import { URL_API } from "../../data/firebase";
-import { quintasData } from "../../data/mock";
+import { quintasData } from "../../data/mockUser";
 
 export const GET_HOUSES = 'GET_HOUSES';
 
